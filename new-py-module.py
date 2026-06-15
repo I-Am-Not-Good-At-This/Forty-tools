@@ -19,6 +19,7 @@ def create_folders(path: Path) -> None:
         else:
             try:
                 ex_path.mkdir(parents=True)
+                (ex_path / ".gitkeep").touch()
                 print(f"Directory {ex_path}/ successfully created.")
             except Exception as e:
                 sys.stderr.write(f"Error creating directory {ex_path}/: {e}\n")
