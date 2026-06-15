@@ -12,7 +12,7 @@ def create_folders(path: Path) -> None:
         except ValueError:
             sys.stderr.write("Invalid number: please enter a positive integer.\n")
 
-    for x in range(ex_number):
+    for x in range(ex_number + 1):
         ex_path = path / f"ex{x}"
         if ex_path.exists():
             print(f"Directory {ex_path}/ already exists, skipping.")
